@@ -1,0 +1,41 @@
+import { Button } from "@mui/material";
+import React, { useContext } from "react";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { AuthContext } from "../../context/AuthContext";
+
+export const Header = () => {
+  const auth = useContext(AuthContext);
+  const handleLogout = async () => {
+    await auth.signout();
+    window.location.reload();
+  };
+
+  return (
+    <Navbar bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand href="#home">
+          Sistema de Controle de Horas Extras
+        </Navbar.Brand>
+        <Navbar.Toggle arai-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="private">Private</Nav.Link>
+            <Nav.Link href="horaextra">HoraExtra</Nav.Link>
+            <Nav.Link href="#sobreaviso">Sobreaviso</Nav.Link>
+            <Nav.Link href="#centroderesultados">
+              Cadastrar Centro de Resultados
+            </Nav.Link>
+            <Nav.Link href="#cliente">Cadastrar Cliente</Nav.Link>
+
+            {auth.colaborador && (
+              <Button size="large" variant="outlined" onClick={handleLogout}>
+                Sair
+              </Button>
+            )}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+};
