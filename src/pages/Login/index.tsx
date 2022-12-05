@@ -35,7 +35,7 @@ export const Login = () => {
       <div className="Auth-form-container">
         <form className="Auth-form">
           <div className="Auth-form-content">
-            <h3 className="Auth-form-title">Login</h3>
+            <h3 className="Auth-form-title">Sistema de Gerenciamento de Horas Extras e Sobreaviso</h3>
             <div className="form-group mt-3">
               <label>Matricula</label>
               <input

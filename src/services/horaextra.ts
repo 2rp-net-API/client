@@ -1,8 +1,8 @@
-import { HoraExtra } from "../types";
-import api from "./api";
+import { Api } from "../providers"
+import { HoraExtra } from "../types"
 
-const create = () => api.post<HoraExtra>("/horaextra/create");
+const getAll = () => Api.get<HoraExtra[]>('/horaextra/list')
 
 export const horaextra = {
-  create,
-};
+  getAll,
+}

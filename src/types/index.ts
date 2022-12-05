@@ -1,18 +1,26 @@
-export interface Props {}
+// export type Colaborador = {
+//   id: number;
+//   nome: string;
+//   matricula: number;
+//   password?: string;
+//   status: string;
+//   perfil: string;
+// };
 
-export type Colaborador = {
-  id: number;
-  nome: string;
+export interface Colaborador {
+  idcolaborador: number;
   matricula: number;
-  password?: string;
-  status: string;
+  nome: string;
+  senha: string;
   perfil: string;
-};
+  status: string;
+}
 
 export interface HoraExtra {
-  id: number;
-  entrada: string;
-  saida: string;
+  entrada: Date;
+  saida: Date;
   description: string;
+  colaborador: Colaborador;
   isApproved: boolean;
+  idhoraextra: number;
 }

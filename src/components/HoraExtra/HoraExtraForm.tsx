@@ -25,7 +25,7 @@ export const HoraExtraForm = () => {
         id="outlined-basic"
         label="ID Colaborador"
         variant="outlined"
-        defaultValue={decoded.id}
+        defaultValue={decoded.idcolaborador}
       />
       <TextField
         size="small"

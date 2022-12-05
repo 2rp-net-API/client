@@ -6,6 +6,7 @@ import { AuthContext } from "./AuthContext";
 export const AuthProvider = ({ children }: { children: JSX.Element }) => {
   const [colaborador, setColaborador] = useState<Colaborador | null>(null);
   const api = useApi();
+  const change = false;
 
   useEffect(() => {
     const validateToken = async () => {
@@ -18,7 +19,7 @@ export const AuthProvider = ({ children }: { children: JSX.Element }) => {
       }
     };
     validateToken();
-  }, [api]);
+  }, [change]);
 
   const signin = async (matricula: string, senha: string) => {
     const data = await api.signin(matricula, senha);
