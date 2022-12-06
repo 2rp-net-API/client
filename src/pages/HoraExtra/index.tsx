@@ -6,7 +6,10 @@ import { HorasExtrasPendentes } from "../../components/HoraExtra/HorasExtrasPend
 export const HoraExtra = () => {
   return (
     <div>
-      <Card sx={{ minWidth: 500, maxWidth: 700 }} variant="outlined">
+      <Card
+        sx={{ minWidth: 500, maxWidth: 700, margin: "auto", marginTop: 10 }}
+        variant="outlined"
+      >
         <CardContent>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
             Cadastrar Nova Hora Extra
@@ -14,7 +17,7 @@ export const HoraExtra = () => {
           <HoraExtraForm />
         </CardContent>
       </Card>
-      <Card sx={{ minWidth: 500, maxWidth: 700 }} variant="outlined">
+      <Card sx={{ minWidth: 500, marginTop: 10 }} variant="outlined">
         <CardContent>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
             Horas Extras Cadastradas
